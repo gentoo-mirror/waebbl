@@ -30,7 +30,7 @@ media-gfx/freecad:mesh - Build the mesh module and workbench to work with triang
 media-gfx/freecad:netgen - Support sci-mathematics/netgen with the FEM workbench
 media-gfx/freecad:openscad - Build the OpenSCAD module for interoperability with OpenSCAD and repairing Constructive Solid Geometry (CSG) history
 media-gfx/freecad:part-design - Build the part design module and workbench for build part shapes from sketches
-media-gfx/freecad:path - FIXME: auto-enable throught robot? Build the path module and workbench to procude G-Code instructions for CNC
+media-gfx/freecad:path - Build the path module and workbench to procude G-Code instructions for CNC
 media-gfx/freecad:pcl - Use external sci-libs/pcl for point clouds support.
 media-gfx/freecad:plot - Build the internal plot workbench. NOTE: This conflicts with the external plot workbench, which you can add via the Addon Manager!
 media-gfx/freecad:points - Build the points module and workbench for working with point clouds
