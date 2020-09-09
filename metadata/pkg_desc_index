@@ -53,6 +53,7 @@ sci-libs/calculix-cgx 2.10: A Free Software Three-Dimensional Structural Finite 
 sci-libs/cgnslib 3.4.0: CFD General Notation System standard library
 sci-libs/magma 2.4.0: Matrix Algebra on GPU and Multicore Architectures
 sci-libs/parmetis 4.0.3: Parallel (MPI) unstructured graph partitioning library
+sci-libs/spooles 2.2: SParse Object Oriented Linear Equations Solver
 sci-libs/vtk 8.2.0-r1 8.2.0-r2: The Visualization Toolkit
 sci-mathematics/netgen 6.2.1910: Automatic 3d tetrahedal mesh generator
 sci-misc/cdfplayer 11.3.0: Wolfram Player for the interactive Computable Document Format (CDF)
