@@ -57,7 +57,6 @@ media-libs/SoQt:man - Build and install man pages
 media-libs/SoQt:qthelp - Enable qthelp documentation
 media-libs/SoQt:spacenav - Add support for SpaceNavigator and friends through dev-libs/libspnav.
 media-libs/coin:3ds - Enables 3ds import capabilities
-media-libs/coin:3ds-import - Enables 3ds import capabilities
 media-libs/coin:draggers - Enables Dragger support
 media-libs/coin:exceptions - Enable g++ exceptions
 media-libs/coin:man - Build and install man pages
