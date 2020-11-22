@@ -25,7 +25,6 @@ media-gfx/freecad 0.18.4-r1 9999: QT based Computer Aided Design application
 media-gfx/luxcorerender 2.1-r1 9999: A physically correct, unbiased rendering engine.
 media-gfx/opencsg 1.4.2-r1: The Constructive Solid Geometry rendering library
 media-gfx/openexr_viewers 2.3.0: OpenEXR Viewers
-media-gfx/openscad 2019.05-r3: The Programmers Solid 3D CAD Modeller
 media-gfx/openvdb 5.2.0-r1 7.0.0: Library for efficient manipulation of volumetric data
 media-gfx/osg2vsg 9999: Convert OpenSceneGraph images into VulkanSceneGraph
 media-gfx/renderman 22.1.0: Renderman render engine
