@@ -8,13 +8,9 @@ dev-python/pivy:quarter - Use media-libs/quarter for GUI bindings
 dev-python/pivy:soqt - Use media-libs/SoQt for GUI bindings
 dev-python/pyilmbase:numpy - Add bindings for dev-python/numpy use.
 games-util/simulationcraft:gui - Builds the Qt5 GUI
-media-gfx/alembic:arnold - Add support for arnold renderer (experimental)
-media-gfx/alembic:boost - Use dev-libs/boost library
 media-gfx/alembic:examples - Install alembic examples
 media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
-media-gfx/alembic:maya - Compile Alembic plugin for Maya (experimental)
 media-gfx/alembic:prman - Compile Alembic plugin for Renderman (experimental)
-media-gfx/alembic:python - Build pyalembic python bindings (needs dev-python/pyilmbase)
 media-gfx/alembic:test - Build and run the test-suite
 media-gfx/alembic:zlib - Use sys-libs/zlib for compressions
 media-gfx/freecad:addonmgr - Build the addon manager module for automatic handling of 3rd party addons
