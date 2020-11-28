@@ -29,11 +29,11 @@ RDEPEND="<sys-devel/clang-11:="
 DEPEND="
 	${RDEPEND}
 	${PYTHON_DEPS}
-"
+	"
 BDEPEND="
 	sys-devel/bison
 	sys-devel/flex
-"
+	"
 
 LLVM_MAX_SLOT=10
 
@@ -41,7 +41,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.13.0-cmake-gentoo-release.patch"
 	"${FILESDIR}/${PN}-1.14.0-llvm-10.patch"
 	"${FILESDIR}/${PN}-1.13.0-werror.patch"
-	"${FILESDIR}/${PN}-1.14.1-0001-restrict-llvm-version.patch"
+	"${FILESDIR}/${P}-0001-restrict-llvm-version.patch"
 )
 
 DOCS=( README.md SECURITY.md docs/ReleaseNotes.txt )
