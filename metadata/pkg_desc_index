@@ -21,7 +21,7 @@ gnome-base/libgnomeui 2.24.5-r5: User Interface routines for Gnome
 media-gfx/alembic 1.7.16: Open framework for storing and sharing scene data
 media-gfx/aoi 2.5 2.7.2: A free, open-source 3D modelling and rendering studio
 media-gfx/awesomebump 5.0: Tool to generate different types of textures from a single image.
-media-gfx/freecad 0.18.4-r1 0.18.5 9999: QT based Computer Aided Design application
+media-gfx/freecad 0.18.5-r1 9999: QT based Computer Aided Design application
 media-gfx/luxcorerender 2.1-r1 9999: A physically correct, unbiased rendering engine.
 media-gfx/opencsg 1.4.2-r1: The Constructive Solid Geometry rendering library
 media-gfx/openexr_viewers 2.3.0: OpenEXR Viewers
@@ -31,7 +31,6 @@ media-gfx/renderman 22.1.0: Renderman render engine
 media-gfx/renderman-for-blender 21.5.0: RenderMan addon for blender
 media-gfx/vsgExamples 9999: vsgviewer and vsgdraw example programs for VulkanSceneGraph
 media-libs/SoQt 1.6.0: The glue between Coin3D and Qt
-media-libs/coin 4.0.0: A high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1
 media-libs/draco 1.3.5-r2: Library for compressing and decompressing 3D geometric objects
 media-libs/embree 3.5.2 9999: Collection of high-performance ray tracing kernels
 media-libs/ilmbase 2.3.0: OpenEXR ILM Base libraries
@@ -42,6 +41,7 @@ media-libs/opencollada 1.6.68: Stream based read/write library for COLLADA files
 media-libs/openexr 2.3.0: ILM's OpenEXR high dynamic-range image file format libraries
 media-libs/opensubdiv 3.4.0: An Open-Source subdivision surface library
 media-libs/quarter 1.1.0: Coin GUI binding for Qt
+media-libs/simage 1.8.0-r1: Image and video texturing library
 media-libs/vsg 9999: Vulkan and C++-17 based Scene Graph Project
 media-libs/vsgXchange 9999: VulkanSceneGraph integration library
 media-sound/denemo 2.2.0: A music notation editor
@@ -51,6 +51,7 @@ sci-libs/calculix-ccx 2.10: A Free Software Three-Dimensional Structural Finite 
 sci-libs/calculix-cgx 2.10: A Free Software Three-Dimensional Structural Finite Element Program
 sci-libs/cgnslib 3.4.0: CFD General Notation System standard library
 sci-libs/magma 2.4.0: Matrix Algebra on GPU and Multicore Architectures
+sci-libs/oce 0.18.3-r3: Development platform for CAD/CAE, 3D surface/solid modeling and data exchange
 sci-libs/parmetis 4.0.3: Parallel (MPI) unstructured graph partitioning library
 sci-libs/spooles 2.2: SParse Object Oriented Linear Equations Solver
 sci-libs/vtk 8.2.0-r2: The Visualization Toolkit

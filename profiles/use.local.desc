@@ -23,6 +23,7 @@ media-gfx/freecad:inspection - Build the inspection workbench which gives you sp
 media-gfx/freecad:material - Build the material module and workbench to work with materials
 media-gfx/freecad:mesh - Build the mesh module and workbench to work with triangulated meshes
 media-gfx/freecad:netgen - Support sci-mathematics/netgen with the FEM workbench
+media-gfx/freecad:oce - If set, build against the community edition of opencascade, sci-libs/oce. If unset, the package is built against the official version sci-libs/opencascade.
 media-gfx/freecad:openscad - Build the OpenSCAD module for interoperability with OpenSCAD and repairing Constructive Solid Geometry (CSG) history
 media-gfx/freecad:part-design - Build the part design module and workbench for build part shapes from sketches
 media-gfx/freecad:path - Build the path module and workbench to procude G-Code instructions for CNC
@@ -51,15 +52,6 @@ media-libs/SoQt:coin-iv-extensions - Enables extra open inventor extensions
 media-libs/SoQt:man - Build and install man pages
 media-libs/SoQt:qthelp - Enable qthelp documentation
 media-libs/SoQt:spacenav - Add support for SpaceNavigator and friends through dev-libs/libspnav.
-media-libs/coin:3ds - Enables 3ds import capabilities
-media-libs/coin:draggers - Enables Dragger support
-media-libs/coin:exceptions - Enable g++ exceptions
-media-libs/coin:man - Build and install man pages
-media-libs/coin:manipulators - Enables Manipulator support
-media-libs/coin:nodekits - Enables Nodekit support
-media-libs/coin:qthelp - Enable qthelp documentation"
-media-libs/coin:simage - Enables runtime linkage of simage library
-media-libs/coin:vrml97 - Enables VRML97 support
 media-libs/draco:compat - Build in compatibility mode.
 media-libs/draco:gltf - Compile with support for glTF (GL Transmission Format) from The Khronos Group Inc.
 media-libs/embree:clang - Use sys-devel/clang to compile Embree
@@ -92,6 +84,10 @@ sci-libs/magma:maxwell - Compile for GPU NVIDIA Maxwell family (sm_5x)
 sci-libs/magma:pascal - Compile for GPU NVIDIA Pascal family (sm_6x)
 sci-libs/magma:sparse - Additionally build the sparse matrix library
 sci-libs/magma:volta - Compile for GPU NVIDIA Volta family (sm_7x)
+sci-libs/oce:freeimage - Enable support for image i/o via media-libs/freeimage
+sci-libs/oce:gl2ps - Use gl2ps PostScript printing library
+sci-libs/oce:tbb - Enable parallel meshing
+sci-libs/oce:vtk - Enable Virtualisation Toolkit
 sci-libs/parmetis:double-precision - Floating-point operation done as double precision
 sci-libs/parmetis:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/vtk:R - Enable support for dev-lang/R
