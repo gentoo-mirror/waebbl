@@ -10,6 +10,7 @@ dev-python/pivy 0.6.5: Coin3D bindings for Python
 dev-python/pybind11 2.4.3: Seamless operability between C++11 and Python
 dev-python/pycollada 0.6 0.6-r1: Python library for reading and writing COLLADA documents
 dev-python/pyilmbase 2.3.0-r1: ilmbase Python bindings
+dev-python/recommonmark 0.7.1: Python docutils-compatibility bridge to CommonMark
 dev-tcltk/itk 4.1.0: Object Oriented Enhancements for Tcl/Tk
 dev-util/codespell 1.15.0: Check text files for common misspellings
 dev-util/elkhound 9999: Elkhound is a GLR parser generator
