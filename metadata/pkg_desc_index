@@ -22,7 +22,7 @@ gnome-base/libgnomeui 2.24.5-r5: User Interface routines for Gnome
 media-gfx/alembic 1.7.16: Open framework for storing and sharing scene data
 media-gfx/aoi 2.5 2.7.2: A free, open-source 3D modelling and rendering studio
 media-gfx/awesomebump 5.0: Tool to generate different types of textures from a single image.
-media-gfx/freecad 0.18.5-r1 9999: QT based Computer Aided Design application
+media-gfx/freecad 0.18.5-r2 9999: QT based Computer Aided Design application
 media-gfx/luxcorerender 2.1-r1 9999: A physically correct, unbiased rendering engine.
 media-gfx/opencsg 1.4.2-r1: The Constructive Solid Geometry rendering library
 media-gfx/openexr_viewers 2.3.0: OpenEXR Viewers
