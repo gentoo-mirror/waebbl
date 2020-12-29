@@ -4,12 +4,12 @@
 #
 language: python
 python:
-    - "3.7"
+    - "3.8"
 env:
-    - PORTAGE_VER="2.3.94"
+    - PORTAGE_VER="3.0.12"
 before_install:
     - sudo apt-get -qq update
-    - pip install lxml pyyaml
+    - pip install lxml pyyaml pkgcheck
 before_script:
     - sudo chmod a+rwX /etc/passwd /etc/group /etc /var /var/cache
     - mkdir -p travis-overlay /etc/portage /var/cache/distfiles /var/db/repos/gentoo
@@ -26,5 +26,5 @@ before_script:
     - ln -s /var/db/repos/gentoo/profiles/default/linux/amd64/17.0 /etc/portage/make.profile
     - cd travis-overlay
 script:
-    - ./../spinner.sh "python ../portage-portage-${PORTAGE_VER}/repoman/bin/repoman full -d -x -i"
-# You can append own scripts after this line
+    - ./../spinner.sh "python ../portage-portage-${PORTAGE_VER}/repoman/bin/repoman full -d -x"
+	- pkgcheck scan --exit
