@@ -3,26 +3,29 @@
 
 EAPI=7
 
-inherit cmake git-r3
+inherit cmake
+
+MY_PV=${PV//./-}
 
 DESCRIPTION="Elkhound is a GLR parser generator"
 HOMEPAGE="http://scottmcpeak.com/elkhound"
-EGIT_REPO_URI="https://github.com/WeiDUorg/elkhound.git"
+SRC_URI="https://github.com/WeiDUorg/${PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="doc"
+KEYWORDS="~amd64"
+IUSE="doc test"
+RESTRICT="!test? ( test )"
 
-# The source contains explicit calls to bison, so we can't depend
-# on virtual/yacc anymore.
-DEPEND="
+RDEPEND=">=dev-lang/ocaml-4.04.2-r1[ocamlopt]"
+DEPEND="${RDEPEND}"
+BDEPEND="
 	sys-devel/bison
 	sys-devel/flex
-	doc? ( >=media-gfx/graphviz-2.38.0-r1[svg]
-)"
-RDEPEND=">=dev-lang/ocaml-4.04.2-r1[ocamlopt]"
+	doc? ( >=media-gfx/graphviz-2.38.0-r1[svg] )
+"
 
-S="${WORKDIR}/${P}/src"
+S="${WORKDIR}/${PN}-${MY_PV}/src"
 
 src_prepare() {
 	sed -e 's|CMAKE_C_FLAGS \"-g3|CMAKE_C_FLAGS \"\${CMAKE_C_FLAGS}|' \
@@ -30,6 +33,17 @@ src_prepare() {
 		-i CMakeLists.txt || die
 
 	cmake_src_prepare
+}
+
+src_configure() {
+	local mycmakeargs=(
+		# don't build extra parser (ON by default)
+		-DEXTRAS=OFF
+		# don't build ocaml example (ON by default)
+		-DOCAML=OFF
+	)
+
+	cmake_src_configure
 }
 
 src_install() {
@@ -71,37 +85,43 @@ src_install() {
 		doins "${S}"/elkhound/${i}
 	done
 
-	local HTML_DOCS_SMBASE=( index.html trace.html )
-	local HTML_DOCS_AST=( index.html manual.html )
-	local HTML_DOCS_ELKHOUND=( algorithm.html faq.html index.html manual.html tutorial.html )
-	local DOCS_SMBASE=( string.txt )
-	local DOCS_AST=( readme.txt )
-	local DOCS_ELKHOUND=( grammar.txt parsgen.txt readme.txt )
-	einstalldocs
+	dodoc "${WORKDIR}"/${PN}-${MY_PV}/README.md
+
 	if use doc; then
-		docinto /usr/share/doc/${PF}/smbase
+		local DOCS_SMBASE=( string.txt )
+		docinto smbase
 		for i in ${DOCS_SMBASE[@]}; do
-			doins "${S}"/smbase/${i}
+			dodoc "${S}"/smbase/${i}
 		done
-		docinto /usr/share/doc/${PF}/ast
-		for i in ${DOCS_AST[@]}; do
-			doins "${S}"/ast/${i}
-		done
-		docinto /usr/share/doc/${PF}/elkhound
-		for i in ${DOCS_ELKHOUND[@]}; do
-			doins "${S}"/elkhound/${i}
-		done
-		docinto /usr/share/doc/${PF}/smbase/html
+
+		local HTML_DOCS_SMBASE=( index.html trace.html )
+		docinto smbase/html
 		for i in ${HTML_DOCS_SMBASE[@]}; do
-			doins "${S}"/smbase/${i}
+			dodoc "${S}"/smbase/${i}
 		done
-		docinto /usr/share/doc/${PF}/ast/html
+
+		local DOCS_AST=( readme.txt )
+		docinto ast
+		for i in ${DOCS_AST[@]}; do
+			dodoc "${S}"/ast/${i}
+		done
+
+		local HTML_DOCS_AST=( index.html manual.html )
+		docinto ast/html
 		for i in ${HTML_DOCS_AST[@]}; do
-			doins "${S}"/ast/${i}
+			dodoc "${S}"/ast/${i}
 		done
-		docinto /usr/share/doc/${PF}/elkhound/html
+
+		local DOCS_ELKHOUND=( grammar.txt parsgen.txt readme.txt )
+		docinto elkhound
+		for i in ${DOCS_ELKHOUND[@]}; do
+			dodoc "${S}"/elkhound/${i}
+		done
+
+		local HTML_DOCS_ELKHOUND=( algorithm.html faq.html index.html manual.html tutorial.html )
+		docinto elkhound/html
 		for i in ${HTML_DOCS_ELKHOUND[@]}; do
-			doins "${S}"/elkhound/${i}
+			dodoc "${S}"/elkhound/${i}
 		done
 	fi
 }

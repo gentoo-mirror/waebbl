@@ -9,15 +9,16 @@
 
 EAPI=7
 
-inherit cmake git-r3
+inherit cmake
 
+MY_PV=${PV/./-}
 DESCRIPTION="SimulationCraft is a tool to explore combat mechanics in World of Warcraft."
 HOMEPAGE="http://simulationcraft.org/"
-EGIT_REPO_URI="https://github.com/simulationcraft/simc.git"
-EGIT_BRANCH="shadowlands"
+SRC_URI="https://github.com/${PN}/simc/archive/release-${MY_PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="~amd64"
 # FIXME: add clang support as alternative compiler
 IUSE="doc +gui"
 
@@ -37,10 +38,11 @@ BDEPEND="doc? ( app-doc/doxygen )"
 
 DOCS=( CONTRIBUTING.md README.md )
 
+S="${WORKDIR}/simc-release-${MY_PV}"
+
 src_configure() {
 	local mycmakeargs=(
 		-DBUILD_GUI=$(usex gui)
-		-DSC_TO_INSTALL=ON
 	)
 	cmake_src_configure
 }
