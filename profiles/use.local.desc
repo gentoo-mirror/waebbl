@@ -5,7 +5,6 @@
 dev-libs/qtnproperty:demo - Build and install the demo program.
 dev-python/pivy:quarter - Use media-libs/quarter for GUI bindings
 dev-python/pivy:soqt - Use media-libs/SoQt for GUI bindings
-dev-python/pyilmbase:numpy - Add bindings for dev-python/numpy use.
 games-util/simulationcraft:gui - Builds the Qt5 GUI
 media-gfx/alembic:examples - Install alembic examples
 media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
@@ -40,14 +39,6 @@ media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more adv
 media-gfx/freecad:tux - Build the Tux module
 media-gfx/luxcorerender:opencl - Build with OpenCL support
 media-gfx/openexr_viewers:cg - Add support for nvidia's cg shaders
-media-gfx/openvdb:abi4-compat - Build openvdb with compatibility for older ABIs
-media-gfx/openvdb:numpy - Build pyopenvdb with support for dev-python/numpy
-media-gfx/openvdb:openvdb_abi_3 - Disables newer features to maintain compatibility with ABI version 3. Default for version 3.
-media-gfx/openvdb:openvdb_abi_4 - Disables newer features to maintain compatibility with ABI version 4. Default for version 4.
-media-gfx/openvdb:openvdb_abi_5 - Disables newer features to maintain compatibility with ABI version 5. Default for version 5.
-media-gfx/openvdb:openvdb_abi_6 - Disables newer features to maintain compatibility with ABI version 6. Default for version 6.
-media-gfx/openvdb:openvdb_abi_7 - Disables newer features to maintain compatibility with ABI version 7. Default for version 7.
-media-gfx/openvdb:utils - Build utility binaries
 media-libs/SoQt:coin-iv-extensions - Enables extra open inventor extensions
 media-libs/SoQt:man - Build and install man pages
 media-libs/SoQt:qthelp - Enable qthelp documentation
@@ -59,26 +50,10 @@ media-libs/embree:ispc - Enables ISPC support for Embree through dev-lang/ispc
 media-libs/embree:raymask - Enable the ray masking feature
 media-libs/embree:tbb - Use Intel's threading library dev-cpp/tbb
 media-libs/embree:tutorial - Compile and install the Embree tutorials.
-media-libs/opensubdiv:cuda - Enable NVIDIA CUDA Toolkit support through dev-util/nvidia-cuda-toolkit.
-media-libs/opensubdiv:opencl - Enable OpenCL support through virtual/opencl.
-media-libs/opensubdiv:ptex - Adds support for faster per-face texture mapping through media-libs/ptex.
-media-libs/opensubdiv:tbb - Enable multithreading with the Intel Threads Building Blocks through dev-cpp/tbb.
 media-libs/quarter:designer - Build plugin for Qt Designer
 media-libs/quarter:qthelp - Build the Qt Help documentation
 media-libs/quarter:spacenav - Build support for app-misc/spacenavd
-media-sound/denemo:alsa - Enable alsa support through media-libs/alsa-lib
-media-sound/denemo:aubio - Enable media-libs/aubio support
-media-sound/denemo:doc - Use dev-util/gtk-doc to build documentation in html format
-media-sound/denemo:evince - Use app-text/evince document viewer
-media-sound/denemo:fluidsynth - Enable Fluidsynth MIDI software synthesis using media-sound/fluidsynth
-media-sound/denemo:gtk3 - Enable support for the GTK+. If enabled uses slot 3 of x11-libs/gtk+, if disabled it uses slot 2
-media-sound/denemo:jack - Enable jack support through virtual/jack
-media-sound/denemo:portaudio - Enable support for media-libs/portaudio
-media-sound/denemo:portmidi - Enable support for the media-libs/portmidi backend
-media-sound/denemo:rubberband - Enable support for media-libs/rubberband
 sci-libs/calculix-ccx:arpack - Add sparse eigen value support via sci-libs/arpack
-sci-libs/cgnslib:legacy - Enable or disable building legacy code (3.0 compatible)
-sci-libs/cgnslib:tools - A number of utility programs: cgnscheck, cgnscompress, cgnsdiff, cgnslist, cgnsnames, cgnsupdate, cgnsconvert, adf2hdf, hdf2adf.
 sci-libs/magma:kepler - Compile for GPU NVIDIA Kepler family (sm_3x)
 sci-libs/magma:maxwell - Compile for GPU NVIDIA Maxwell family (sm_5x)
 sci-libs/magma:pascal - Compile for GPU NVIDIA Pascal family (sm_6x)
@@ -88,8 +63,6 @@ sci-libs/oce:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/oce:gl2ps - Use gl2ps PostScript printing library
 sci-libs/oce:tbb - Enable parallel meshing
 sci-libs/oce:vtk - Enable Virtualisation Toolkit
-sci-libs/parmetis:double-precision - Floating-point operation done as double precision
-sci-libs/parmetis:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/vtk:R - Enable support for dev-lang/R
 sci-libs/vtk:all-modules - Build all modules
 sci-libs/vtk:boost - Add support for boost
@@ -102,7 +75,7 @@ sci-libs/vtk:tbb - Use dev-cpp/tbb to handle smp support
 sci-libs/vtk:views - Building Views modules
 sci-libs/vtk:web - Install web component
 sci-libs/vtk:xdmf2 - Support for xdmf2 formated data
-sci-mathematics/netgen:ffmpeg - Enable video recording with virtual/ffmpeg
+sci-mathematics/netgen:ffmpeg - Enable video recording with media-video/ffmpeg
 sci-mathematics/netgen:gui - Build the graphical user interface
 sci-mathematics/netgen:jpeg - Enable snapshots using a virtual/jpeg
 sci-mathematics/netgen:mpi - Enable mpi parallelization using virtual/mpi
