@@ -6,6 +6,7 @@ dev-lang/ispc 1.14.1 9999: Intel SPMD Program Compiler
 dev-libs/qtnproperty 1.0.1 9999: Tool to extend properties in the Qt5 framework.
 dev-python/ebuildtester 9999: A dockerized approach to test a Gentoo package within a clean stage3 container
 dev-python/pivy 0.6.5: Coin3D bindings for Python
+dev-python/pyside2-tools 5.15.1-r1: PySide development tools (pyside2-lupdate with support for Python)
 dev-python/recommonmark 0.7.1: Python docutils-compatibility bridge to CommonMark
 dev-util/codespell 1.15.0: Check text files for common misspellings
 dev-util/elkhound 2019.02.17 9999: Elkhound is a GLR parser generator
