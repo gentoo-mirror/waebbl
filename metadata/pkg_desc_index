@@ -1,4 +1,4 @@
-app-doc/freecad-doc 9999: QT based computer aided design application manuals
+app-doc/freecad-doc 0.19_pre20201231 9999: QT based computer aided design application manuals
 app-emulation/lxc-gentoo 9999: LXC container creation script for gentoo containers
 dev-cpp/zipios 2.1.4: C++ library for reading and writing zip files
 dev-go/modmerge 1.1-r1: Tool which merges mod zip files back into Infinity Engine games.
@@ -16,7 +16,7 @@ games-util/weidu 246.00 9999: Develop, distribute and install mods for Infinity 
 media-gfx/alembic 1.7.16: Open framework for storing and sharing scene data
 media-gfx/aoi 2.7.2: A free, open-source 3D modelling and rendering studio
 media-gfx/awesomebump 5.0: Tool to generate different types of textures from a single image.
-media-gfx/freecad 0.18.5-r2 9999: QT based Computer Aided Design application
+media-gfx/freecad 0.18.5-r2 0.19_pre20201231 9999: QT based Computer Aided Design application
 media-gfx/luxcorerender 2.1-r1 9999: A physically correct, unbiased rendering engine.
 media-gfx/opencsg 1.4.2-r1: The Constructive Solid Geometry rendering library
 media-gfx/openexr_viewers 2.3.0: OpenEXR Viewers
