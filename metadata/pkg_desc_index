@@ -30,7 +30,7 @@ media-libs/oidn 1.1.0: Denoising filters for rendered images
 media-libs/opencamlib 9999: C++ and Python library for 3D toolpaths
 media-libs/opencollada 1.6.68: Stream based read/write library for COLLADA files
 media-libs/quarter 1.1.0: Coin GUI binding for Qt
-media-libs/simage 9999: Image and video texturing library
+media-libs/simage 1.8.1 9999: Image and video texturing library
 media-libs/vsg 9999: Vulkan and C++-17 based Scene Graph Project
 media-libs/vsgXchange 9999: VulkanSceneGraph integration library
 sci-astronomy/xephem 3.7.7-r1: Interactive tool for astronomical ephemeris and sky simulation
