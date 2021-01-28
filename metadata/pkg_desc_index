@@ -39,4 +39,4 @@ sci-libs/calculix-cgx 2.10: A Free Software Three-Dimensional Structural Finite 
 sci-libs/magma 2.4.0: Matrix Algebra on GPU and Multicore Architectures
 sci-libs/oce 0.18.3-r3: Development platform for CAD/CAE, 3D surface/solid modeling and data exchange
 sci-libs/spooles 2.2: SParse Object Oriented Linear Equations Solver
-sci-libs/vtk 8.2.0-r2: The Visualization Toolkit
+sci-libs/vtk 8.2.0-r2 9.0.1: The Visualization Toolkit
