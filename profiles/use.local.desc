@@ -41,7 +41,6 @@ media-gfx/freecad:spreadsheet - Build the spreadsheet module and workbench to cr
 media-gfx/freecad:surface - Build the surface module and workbench
 media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more advanced and feature-rich successor of the drawing workbench
 media-gfx/freecad:tux - Build the Tux module
-media-gfx/luxcorerender:opencl - Build with OpenCL support
 media-gfx/openexr_viewers:cg - Add support for nvidia's cg shaders
 media-libs/SoQt:coin-iv-extensions - Enables extra open inventor extensions
 media-libs/SoQt:man - Build and install man pages
@@ -85,8 +84,3 @@ sci-libs/vtk:tbb - Use dev-cpp/tbb to handle smp support
 sci-libs/vtk:views - Building Views modules
 sci-libs/vtk:web - Install web component
 sci-libs/vtk:xdmf2 - Support for xdmf2 formated data
-sci-mathematics/netgen:ffmpeg - Enable video recording with media-video/ffmpeg
-sci-mathematics/netgen:gui - Build the graphical user interface
-sci-mathematics/netgen:jpeg - Enable snapshots using a virtual/jpeg
-sci-mathematics/netgen:mpi - Enable mpi parallelization using virtual/mpi
-sci-mathematics/netgen:opencascade - Compile with OpenCascade geometry kernel (not supported upstream)
