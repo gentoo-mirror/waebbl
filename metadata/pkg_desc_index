@@ -2,7 +2,7 @@ app-doc/freecad-doc 0.19_pre20201231 9999: QT based computer aided design applic
 app-emulation/lxc-gentoo 9999: LXC container creation script for gentoo containers
 dev-cpp/zipios 2.1.4: C++ library for reading and writing zip files
 dev-go/modmerge 1.1-r1: Tool which merges mod zip files back into Infinity Engine games.
-dev-lang/ispc 1.14.1 9999: Intel SPMD Program Compiler
+dev-lang/ispc 9999: Intel SPMD Program Compiler
 dev-libs/qtnproperty 1.0.1 9999: Tool to extend properties in the Qt5 framework.
 dev-python/ebuildtester 9999: A dockerized approach to test a Gentoo package within a clean stage3 container
 dev-python/pivy 0.6.5: Coin3D bindings for Python
@@ -23,15 +23,16 @@ media-gfx/osg2vsg 9999: Convert OpenSceneGraph images into VulkanSceneGraph
 media-gfx/vsgExamples 9999: vsgviewer and vsgdraw example programs for VulkanSceneGraph
 media-libs/SoQt 1.6.0: The glue between Coin3D and Qt
 media-libs/draco 1.3.5-r2: Library for compressing and decompressing 3D geometric objects
-media-libs/embree 3.5.2 9999: Collection of high-performance ray tracing kernels
+media-libs/embree 3.12.2 9999: Collection of high-performance ray tracing kernels
 media-libs/lib3mf 1.8.1: Implementation of the 3D Manufacturing Format file standard
-media-libs/oidn 1.1.0: Denoising filters for rendered images
+media-libs/oidn 1.2.4: Denoising filters for rendered images
 media-libs/opencamlib 9999: C++ and Python library for 3D toolpaths
 media-libs/opencollada 1.6.68: Stream based read/write library for COLLADA files
 media-libs/quarter 1.1.0: Coin GUI binding for Qt
 media-libs/simage 1.8.1 9999: Image and video texturing library
 media-libs/vsg 9999: Vulkan and C++-17 based Scene Graph Project
 media-libs/vsgXchange 9999: VulkanSceneGraph integration library
+media-plugins/blendluxcore 2.4: A PBS rendering plugin for blender
 sci-astronomy/xephem 3.7.7-r1: Interactive tool for astronomical ephemeris and sky simulation
 sci-electronics/uconfig 9999: Datasheet pinout extractor from PDF and library Stylizer for Kicad.
 sci-libs/calculix-ccx 2.10: A Free Software Three-Dimensional Structural Finite Element Program

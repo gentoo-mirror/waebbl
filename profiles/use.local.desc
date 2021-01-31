@@ -53,6 +53,7 @@ media-libs/embree:ispc - Enables ISPC support for Embree through dev-lang/ispc
 media-libs/embree:raymask - Enable the ray masking feature
 media-libs/embree:tbb - Use Intel's threading library dev-cpp/tbb
 media-libs/embree:tutorial - Compile and install the Embree tutorials.
+media-libs/oidn:openimageio - Build apps with support for media-libs/openimageio
 media-libs/quarter:designer - Build plugin for Qt Designer
 media-libs/quarter:qthelp - Build the Qt Help documentation
 media-libs/quarter:spacenav - Build support for app-misc/spacenavd
