@@ -49,13 +49,11 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux" # ~arm
 SLOT="0"
 # New in 9.0?: sdl -> from which group / module is it coming?
 # Note: external xdmf2 has no recognized targets
-# Missing: R aqua tcl: R?, aqua seems to have gone, tcl is coverd by tk
 IUSE="+X all-modules boost cuda doc +eigen examples ffmpeg gdal imaging
 	java +json kits mpi mysql odbc offscreen openmp pegtl postgres python
 	qt5 +rendering tbb theora tk video_cards_nvidia views web"
 
 # most tests don't work
-#RESTRICT="!test? ( test )"
 RESTRICT="test"
 
 REQUIRED_USE="
@@ -134,10 +132,6 @@ RDEPEND="
 	')
 "
 DEPEND="${RDEPEND}"
-#	doc? (
-#		app-doc/doxygen[dot]
-#		dev-lang/perl:=
-#	)
 BDEPEND="
 	dev-libs/jsoncpp:=
 	dev-libs/pegtl
@@ -163,8 +157,9 @@ pkg_pretend() {
 	if use cuda; then
 		# NOTE: This should actually equal to (number of build jobs)*7G,
 		# as any of the cuda compile tasks can take up 7G!
+		# 10.2 GiB install directory, 6.4 GiB build directory with max. USE flags
 		CHECKREQS_MEMORY="7G"
-		CHECKREQS_DISK_BUILD="17G"	# 10.2 GiB install directory, 6.4 GiB build directory
+		CHECKREQS_DISK_BUILD="17G"
 		check-reqs_pkg_setup
 	fi
 }
@@ -172,7 +167,7 @@ pkg_pretend() {
 pkg_setup() {
 	if use cuda; then
 		CHECKREQS_MEMORY="7G"
-		CHECKREQS_DISK_BUILD="17G"	# 10.2 GiB install directory, 6.4 GiB build directory
+		CHECKREQS_DISK_BUILD="17G"
 		check-reqs_pkg_setup
 	fi
 	use java && java-pkg-opt-2_pkg_setup
@@ -181,23 +176,6 @@ pkg_setup() {
 }
 
 src_unpack() {
-#	unpack VTK-${PV}.tar.gz
-
-#	if use doc; then
-#		unpack vtkDocHtml-${PV}.tar.gz
-#	fi
-
-#	local MY_DATA=( VTKData-${PV}.tar.gz )
-#	if use test || use examples; then
-#		MY_DATA+=( VTKLargeData-${PV}.tar.gz )
-#	fi
-#	ebegin "Unpacking datafiles"
-#	for i in ${MY_DATA[@]}; do
-#		unpack ${i}
-#	done
-#	unset i
-#	eend "$?"
-
 	default
 
 	if use test; then
@@ -240,11 +218,6 @@ src_prepare() {
 	done
 	unset x
 
-	if use cuda; then
-		cuda_add_sandbox -w
-		cuda_src_prepare
-	fi
-
 	if use doc; then
 		einfo "Removing .md5 files from documents."
 		rm -f "${WORKDIR}"/html/*.md5 || die "Failed to remove superfluous hashes"
@@ -254,11 +227,10 @@ src_prepare() {
 
 	cmake_src_prepare
 
-#	local x
-#	for x in vtkMySQLDatabase.cxx vtkMySQLQuery.cxx; do
-#		sed -e 's/my_bool/bool/' -i IO/MySQL/${x} || die
-#	done
-#	unset x
+	if use cuda; then
+		cuda_add_sandbox -w
+		cuda_src_prepare
+	fi
 
 	if use test; then
 		ebegin "Copying data files to ${BUILD_DIR}"
@@ -353,19 +325,8 @@ src_configure() {
 	fi
 
 	if use cuda; then
-		# Fixme: cuda arch selection
-		mycmakeargs+=(
-#			-DCMAKE_CUDA_ARCHITECTURES=35
-			-DVTKm_CUDA_Architecture="native"
-		)
+		mycmakeargs+=( -DVTKm_CUDA_Architecture="native" )
 	fi
-
-#	if use doc; then
-#		mycmakeargs+=(
-#			-DDOXYGEN_GENERATE_HTMLHELP=OFF
-#			-DVTK_INSTALL_DOCS=ON
-#		)
-#	fi
 
 	if use ffmpeg; then
 		mycmakeargs+=( -DVTK_MODULE_ENABLE_VTK_IOFFMPEG="WANT" )
@@ -376,9 +337,7 @@ src_configure() {
 	fi
 
 	if use java; then
-#		local javacargs=$(java-pkg_javac-args)
 		mycmakeargs+=(
-#			-DJAVAC_OPTIONS=${javacargs// /;}
 			-DCMAKE_INSTALL_JARDIR="share/${PN}"
 			-DVTK_ENABLE_WRAPPING=ON
 		)
@@ -447,6 +406,7 @@ src_configure() {
 		mycmakeargs+=(
 			-DVTK_ENABLE_WRAPPING=ON
 			-DPython3_EXECUTABLE="${PYTHON}"
+			-DVTK_PYTHON_SITE_PACKAGES_SUFFIX="lib/${EPYTHON}/site-packages"
 		)
 	fi
 
@@ -504,10 +464,6 @@ src_configure() {
 		mycmakeargs+=( -DVTK_MODULE_ENABLE_VTK_IOOggTheora="WANT" )
 	fi
 
-#	if use xdmf2; then
-#		mycmakeargs+=( -DVTK_MODULE_ENABLE_VTK_IOXdmf2="WANT" )
-#	fi
-
 	if use all-modules; then
 		mycmakeargs+=(
 			-DVTK_ENABLE_OSPRAY=OFF
@@ -525,8 +481,6 @@ src_configure() {
 		)
 	fi
 
-#	append-cppflags -D__STDC_CONSTANT_MACROS -D_UNICODE
-
 	use java && export JAVA_HOME="${EPREFIX}/etc/java-config-2/current-system-vm"
 
 	if use mpi; then
@@ -539,14 +493,6 @@ src_configure() {
 
 	cmake_src_configure
 }
-
-#src_compile() {
-#	cmake_src_compile
-#
-#	if use doc; then
-#		cmake_src_compile DoxygenDoc
-#	fi
-#}
 
 src_test() {
 	nonfatal virtx cmake_src_test
@@ -582,12 +528,7 @@ src_install() {
 		chrpath -d "${ED}"/usr/$(get_libdir)/*.so.${PV} || die
 	fi
 
-	# move python files to correct location and byte-compile them
-	if use python; then
-		mkdir -pv "${ED}/usr/lib/${EPYTHON}" || die
-		mv -v "${ED}/usr/$(get_libdir)/${EPYTHON}/site-packages" "${ED}/usr/lib/${EPYTHON}" || die
-		python_optimize
-	fi
+	use python && python_optimize
 
 	# environment
 	cat >> "${T}"/40${PN} <<- EOF || die

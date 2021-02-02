@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -161,7 +161,6 @@ src_prepare() {
 	fi
 }
 
-# CMAKE_DISABLE_FIND_PACKAGE_Qt5WebKitWidgets
 src_configure() {
 	# general configuration
 	local mycmakeargs=(
@@ -195,7 +194,7 @@ src_configure() {
 		-DVTK_USE_LARGE_DATA=ON
 		-DVTK_EXTRA_COMPILER_WARNINGS=ON
 		-DVTK_Group_StandAlone=ON
-		-DBUILD_DOCUMENTATION=$(usex doc)
+		-DBUILD_DOCUMENTATION=OFF	# we install prebuilt documentation
 		-DBUILD_EXAMPLES=$(usex examples)
 		-DVTK_BUILD_ALL_MODULES=$(usex all-modules)
 		-DVTK_Group_Imaging=$(usex imaging)
@@ -239,6 +238,7 @@ src_configure() {
 		mycmakeargs+=(
 			-DPYTHON_INCLUDE_DIR="$(python_get_includedir)"
 			-DPYTHON_LIBRARY="$(python_get_library_path)"
+			-DVTK_INSTALL_PYTHON_MODULES_DIR="$(python_get_sitedir)"
 		)
 	fi
 
@@ -285,12 +285,7 @@ src_install() {
 		docinto .
 	fi
 
-	# move python modules and byte-compile them
-	if use python; then
-		mkdir -p "${ED}"$(python_get_sitedir) || die
-		mv "${ED}"/usr/$(get_libdir)/"${EPYTHON}"/site-packages/* "${ED}"/$(python_get_sitedir) || die
-		python_optimize
-	fi
+	use python && python_optimize
 
 	# install examples
 	if use examples; then
