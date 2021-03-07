@@ -3,6 +3,7 @@ app-emulation/lxc-gentoo 9999: LXC container creation script for gentoo containe
 dev-cpp/zipios 2.2.6: C++ library for reading and writing zip files
 dev-go/modmerge 1.1-r1: Tool which merges mod zip files back into Infinity Engine games.
 dev-lang/ispc 9999: Intel SPMD Program Compiler
+dev-libs/imath 9999: Imath basic math package
 dev-libs/qtnproperty 1.0.1 9999: Tool to extend properties in the Qt5 framework.
 dev-python/ebuildtester 9999: A dockerized approach to test a Gentoo package within a clean stage3 container
 dev-python/pivy 0.6.5: Coin3D bindings for Python
@@ -28,6 +29,7 @@ media-libs/lib3mf 1.8.1: Implementation of the 3D Manufacturing Format file stan
 media-libs/oidn 1.2.4: Denoising filters for rendered images
 media-libs/opencamlib 9999: C++ and Python library for 3D toolpaths
 media-libs/opencollada 1.6.68: Stream based read/write library for COLLADA files
+media-libs/openexr 9999: ILM's OpenEXR high dynamic-range image file format libraries
 media-libs/quarter 1.1.0: Coin GUI binding for Qt
 media-libs/simage 1.8.1 9999: Image and video texturing library
 media-libs/vsg 9999: Vulkan and C++-17 based Scene Graph Project

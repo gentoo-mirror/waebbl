@@ -3,6 +3,7 @@
 # * generated automatically using pmaint *
 
 app-doc/freecad-doc:oce - Use OpenCASCade Community Edition through sci-libs/oce instead of the Official Version sci-libs/opencascade
+dev-libs/imath:large-stack - Enables code to take advantage of large stack support
 dev-libs/qtnproperty:demo - Build and install the demo program.
 dev-python/pivy:quarter - Use media-libs/quarter for GUI bindings
 dev-python/pivy:soqt - Use media-libs/SoQt for GUI bindings
@@ -54,6 +55,8 @@ media-libs/embree:raymask - Enable the ray masking feature
 media-libs/embree:tbb - Use Intel's threading library dev-cpp/tbb
 media-libs/embree:tutorial - Compile and install the Embree tutorials.
 media-libs/oidn:openimageio - Build apps with support for media-libs/openimageio
+media-libs/openexr:large-stack - Enable code to take advantage of large stack support.
+media-libs/openexr:utils - Build several utility binaries for verifying and manipulating EXR files.
 media-libs/quarter:designer - Build plugin for Qt Designer
 media-libs/quarter:qthelp - Build the Qt Help documentation
 media-libs/quarter:spacenav - Build support for app-misc/spacenavd
