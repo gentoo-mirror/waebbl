@@ -1,8 +1,6 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# This is in currently WIP! It should work though.
-
 EAPI=7
 
 # FIXME: vtk needs updating to support py-3.9
@@ -31,8 +29,7 @@ SLOT="0"
 
 # FIXME:
 #	smesh: needs a salome-platform package
-
-IUSE="debug doc netgen oce pcl"
+IUSE="debug doc pcl"
 
 FREECAD_EXPERIMENTAL_MODULES="assembly plot ship"
 #FREECAD_DEBUG_MODULES="sandbox template"
@@ -76,6 +73,7 @@ RDEPEND="
 	media-libs/qhull
 	sci-libs/flann[openmp]
 	>=sci-libs/med-4.0.0-r1[python,${PYTHON_SINGLE_USEDEP}]
+	sci-libs/opencascade:=[vtk(+)]
 	sci-libs/orocos_kdl:=
 	sys-libs/zlib
 	virtual/glu
@@ -83,8 +81,6 @@ RDEPEND="
 	virtual/opengl
 	fem? ( <sci-libs/vtk-9[boost,python,qt5,rendering,${PYTHON_SINGLE_USEDEP}] )
 	mesh? ( sci-libs/hdf5:=[fortran,zlib] )
-	oce? ( sci-libs/oce[vtk(+)] )
-	!oce? ( sci-libs/opencascade:=[vtk(+)] )
 	openscad? ( media-gfx/openscad )
 	pcl? ( >=sci-libs/pcl-1.8.1:=[opengl,openni2(+),qt5(+),vtk(+)] )
 	$(python_gen_cond_dep '
@@ -114,6 +110,7 @@ BDEPEND="
 # Fem actually needs smesh, but as long as we don't have a smesh package, we enable
 # smesh through the mesh USE flag. Note however, the fem<-smesh dependency isn't
 # reflected by the REQUIRES_MODS macro, but at CMakeLists.txt:309.
+#	netgen? ( fem )
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 	arch? ( mesh )
@@ -121,7 +118,6 @@ REQUIRED_USE="
 	drawing? ( spreadsheet )
 	fem? ( mesh )
 	inspection? ( mesh points )
-	netgen? ( fem )
 	openscad? ( mesh )
 	path? ( robot )
 	ship? ( image plot )
@@ -134,10 +130,10 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-0.18.4-0002-Fix-PySide-related-checks.patch
 	"${FILESDIR}"/${PN}-0.18.4-0006-add-missing-include-statements.patch
 	"${FILESDIR}"/${PN}-0.18.4-0007-fix-boost-placeholders-problem.patch
-	"${FILESDIR}"/${P}-0001-fix-std-namespace-issue-with-endl.patch
-	"${FILESDIR}"/${P}-0002-fix-path-for-coin-doc.patch
-	"${FILESDIR}"/${P}-0003-use-correct-uic-and-rcc-calls.patch
-	"${FILESDIR}"/${P}-0004-Fix-python-3.8-related-issue.patch
+	"${FILESDIR}"/${PN}-0.18.5-0001-fix-std-namespace-issue-with-endl.patch
+	"${FILESDIR}"/${PN}-0.18.5-0002-fix-path-for-coin-doc.patch
+	"${FILESDIR}"/${PN}-0.18.5-0003-use-correct-uic-and-rcc-calls.patch
+	"${FILESDIR}"/${PN}-0.18.5-0004-Fix-python-3.8-related-issue.patch
 )
 
 CHECKREQS_DISK_BUILD="7G"
@@ -147,9 +143,7 @@ CHECKREQS_DISK_BUILD="7G"
 pkg_setup() {
 	check-reqs_pkg_setup
 	python-single-r1_pkg_setup
-	if ! use oce; then
-		[[ -z ${CASROOT} ]] && die "\${CASROOT} not set, plesae run eselect opencascade"
-	fi
+	[[ -z ${CASROOT} ]] && die "\${CASROOT} not set, plesae run eselect opencascade"
 }
 
 src_prepare() {
@@ -178,7 +172,7 @@ src_configure() {
 		-DBUILD_DRAWING=$(usex drawing)
 		-DBUILD_ENABLE_CXX_STD:STRING="C++14"	# needed for boost-1.75.0
 		-DBUILD_FEM=$(usex fem)
-		-DBUILD_FEM_NETGEN=$(usex netgen)
+		-DBUILD_FEM_NETGEN=OFF # FIXME: re-add netgen package
 		-DBUILD_FLAT_MESH=$(usex mesh)
 		-DBUILD_FREETYPE=ON # automagic dep
 		-DBUILD_GUI=ON
@@ -219,31 +213,21 @@ src_configure() {
 		-DFREECAD_BUILD_DEBIAN=OFF
 		-DFREECAD_USE_EXTERNAL_KDL=ON
 		-DFREECAD_USE_EXTERNAL_SMESH=OFF
-		-DFREECAD_USE_EXTERNAL_ZIPIOS=OFF # doesn't work yet, also no package in gentoo tree
+		# doesn't work with current versions, integrated version is really old
+		-DFREECAD_USE_EXTERNAL_ZIPIOS=OFF
 		-DFREECAD_USE_FREETYPE=ON
+		-DFREECAD_USE_OCC_VARIANT:STRING="Official Version"
 		-DFREECAD_USE_PCL=$(usex pcl)
 		-DFREECAD_USE_PYBIND11=$(usex mesh)
 		-DFREECAD_USE_QT_FILEDIALOG=ON
+		-DOCC_INCLUDE_DIR="${CASROOT}"/include/opencascade
+		-DOCC_LIBRARY_DIR="${CASROOT}"/$(get_libdir)
 		-DOCCT_CMAKE_FALLBACK=ON # don't use occt-config which isn't included in opencascade for Gentoo
 		-DOPENMPI_INCLUDE_DIRS=/usr/include
 		-DPYSIDE2RCCBINARY="${EPREFIX}/usr/bin/rcc"
 		-DPYSIDE2UICBINARY="${EPREFIX}/usr/bin/uic"
 		-DPYTHON_CONFIG_SUFFIX="-${EPYTHON}"	# to use correct python for shiboken
 	)
-
-	if use oce; then
-		mycmakeargs+=(
-			-DFREECAD_USE_OCC_VARIANT:STRING="Community Edition"
-			-DOCC_INCLUDE_DIR=/usr/include/oce
-			-DOCC_LIBRARY_DIR=/usr/$(get_libdir)
-		)
-	else
-		mycmakeargs+=(
-			-DFREECAD_USE_OCC_VARIANT:STRING="Official Version"
-			-DOCC_INCLUDE_DIR="${CASROOT}"/include/opencascade
-			-DOCC_LIBRARY_DIR="${CASROOT}"/$(get_libdir)
-		)
-	fi
 
 	if use debug; then
 		mycmakeargs+=(
@@ -268,29 +252,21 @@ src_install() {
 	dosym ../$(get_libdir)/${PN}/bin/FreeCAD /usr/bin/freecad
 	dosym ../$(get_libdir)/${PN}/bin/FreeCADCmd /usr/bin/freecadcmd
 
-#	make_desktop_entry freecad "FreeCAD" "" "" "MimeType=application/x-extension-fcstd;"
-
 	# install mimetype for FreeCAD files
 #	insinto /usr/share/mime/packages
 #	newins "${FILESDIR}"/${PN}.sharedmimeinfo "${PN}.xml"
 
-#	insinto /usr/share/pixmaps
-#	newins "${S}"/src/Gui/Icons/${PN}.xpm "${PN}.xpm"
+	insinto /usr/share/pixmaps
+	newins "${S}"/src/Gui/Icons/${PN}.xpm "${PN}.xpm"
+
+	mv "${ED}"/usr/$(get_libdir)/freecad/share/* "${ED}"/usr/share || die "failed to move shared ressources"
 
 	# install icons to correct place rather than /usr/share/freecad
-#	local size
-#	for size in 16 32 48 64; do
-#		newicon -s ${size} "${S}"/src/Gui/Icons/${PN}-icon-${size}.png ${PN}.png
-#	done
-#	doicon -s scalable "${S}"/src/Gui/Icons/${PN}.svg
-#	newicon -s 64 -c mimetypes "${S}"/src/Gui/Icons/${PN}-doc.png application-x-extension-fcstd.png
-
-#	rm "${ED}"/usr/share/${PN}/data/${PN}-{doc,icon-{16,32,48,64}}.png || die
-#	rm "${ED}"/usr/share/${PN}/data/${PN}.svg || die
-#	rm "${ED}"/usr/share/${PN}/data/${PN}.xpm || die
-
-	# FIXME: do we want this?
-	mv "${ED}"/usr/$(get_libdir)/freecad/share/* "${ED}"/usr/share || die "failed to move shared ressources"
+	local size
+	for size in 16 32 48 64; do
+		newicon -s ${size} "${S}"/src/Gui/Icons/${PN}-icon-${size}.png ${PN}.png
+	done
+	newicon -s 64 -c mimetypes "${S}"/src/Gui/Icons/${PN}-doc.png application-x-extension-fcstd.png
 
 	if use doc; then
 		[[ ${PV} == *9999 ]] && einfo "Docs are not downloaded for ${PV}" \
