@@ -16,7 +16,6 @@ media-gfx/alembic:zlib - Use sys-libs/zlib for compressions
 media-gfx/freecad:addonmgr - Build the addon manager module for automatic handling of 3rd party addons
 media-gfx/freecad:arch - Build the architecture workbench for working with architectural elements
 media-gfx/freecad:assembly - Build the assembly module
-media-gfx/freecad:ccache - Use dev-util/ccache to build the package.
 media-gfx/freecad:cloud - Build the Cloud workbench, to access cloud providers (mostly Amazon S3).
 media-gfx/freecad:drawing - Build the drawing module and workbench to display 3D work on a 2D sheet
 media-gfx/freecad:fem - Build the FEM module and workbench which provides Finite Element Analysis (FEA) workflows
@@ -26,7 +25,6 @@ media-gfx/freecad:image - Build the image module and workbench for working with 
 media-gfx/freecad:inspection - Build the inspection workbench which gives you specific tools for examination of shapes (experimental)
 media-gfx/freecad:material - Build the material module and workbench to work with materials
 media-gfx/freecad:mesh - Build the mesh module and workbench to work with triangulated meshes
-media-gfx/freecad:oce - If set, build against the community edition of opencascade, sci-libs/oce. If unset, the package is built against the official version sci-libs/opencascade.
 media-gfx/freecad:openscad - Build the OpenSCAD module for interoperability with OpenSCAD and repairing Constructive Solid Geometry (CSG) history
 media-gfx/freecad:part-design - Build the part design module and workbench for build part shapes from sketches
 media-gfx/freecad:path - Build the path module and workbench to procude G-Code instructions for CNC
