@@ -10,9 +10,6 @@ dev-python/pivy:soqt - Use media-libs/SoQt for GUI bindings
 games-util/simulationcraft:gui - Builds the Qt5 GUI
 media-gfx/alembic:examples - Install alembic examples
 media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
-media-gfx/alembic:prman - Compile Alembic plugin for Renderman (experimental)
-media-gfx/alembic:test - Build and run the test-suite
-media-gfx/alembic:zlib - Use sys-libs/zlib for compressions
 media-gfx/freecad:addonmgr - Build the addon manager module for automatic handling of 3rd party addons
 media-gfx/freecad:arch - Build the architecture workbench for working with architectural elements
 media-gfx/freecad:assembly - Build the assembly module
