@@ -4,9 +4,10 @@ DEPEND=>=dev-qt/qtcore-5.2:5 app-text/poppler
 DESCRIPTION=Datasheet pinout extractor from PDF and library Stylizer for Kicad.
 EAPI=7
 HOMEPAGE=https://github.com/Robotips/uConfig
+INHERIT=git-r3 qmake-utils
 LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=>=dev-qt/qtcore-5.2:5 app-text/poppler
 SLOT=0
-_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441	multilib	d410501a125f99ffb560b0c523cd3d1e	qmake-utils	dc74fe3891abc25e80dad5cd3d7c6e47	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	qmake-utils	dc74fe3891abc25e80dad5cd3d7c6e47
 _md5_=59b25accdc92320a98824c3f57a0a8e1
