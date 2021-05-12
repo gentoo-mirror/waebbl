@@ -36,7 +36,6 @@ media-gfx/freecad:spreadsheet - Build the spreadsheet module and workbench to cr
 media-gfx/freecad:surface - Build the surface module and workbench
 media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more advanced and feature-rich successor of the drawing workbench
 media-gfx/freecad:tux - Build the Tux module
-media-gfx/openexr_viewers:cg - Add support for nvidia's cg shaders
 media-libs/SoQt:coin-iv-extensions - Enables extra open inventor extensions
 media-libs/SoQt:man - Build and install man pages
 media-libs/SoQt:qthelp - Enable qthelp documentation

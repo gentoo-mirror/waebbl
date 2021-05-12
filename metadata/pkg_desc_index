@@ -19,7 +19,6 @@ media-gfx/aoi 2.7.2: A free, open-source 3D modelling and rendering studio
 media-gfx/awesomebump 5.0: Tool to generate different types of textures from a single image.
 media-gfx/freecad 0.18.6 9999: QT based Computer Aided Design application
 media-gfx/opencsg 1.4.2-r1: The Constructive Solid Geometry rendering library
-media-gfx/openexr_viewers 2.3.0: OpenEXR Viewers
 media-gfx/osg2vsg 9999: Convert OpenSceneGraph images into VulkanSceneGraph
 media-gfx/vsgExamples 9999: vsgviewer and vsgdraw example programs for VulkanSceneGraph
 media-libs/SoQt 1.6.0: The glue between Coin3D and Qt
@@ -31,7 +30,7 @@ media-libs/opencamlib 9999: C++ and Python library for 3D toolpaths
 media-libs/opencollada 1.6.68: Stream based read/write library for COLLADA files
 media-libs/openexr 9999: ILM's OpenEXR high dynamic-range image file format libraries
 media-libs/quarter 1.1.0: Coin GUI binding for Qt
-media-libs/simage 1.8.1 9999: Image and video texturing library
+media-libs/simage 9999: Image and video texturing library
 media-libs/vsg 9999: Vulkan and C++-17 based Scene Graph Project
 media-libs/vsgXchange 9999: VulkanSceneGraph integration library
 media-plugins/blendluxcore 2.4: A PBS rendering plugin for blender
