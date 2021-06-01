@@ -9,7 +9,6 @@ dev-python/ebuildtester 9999: A dockerized approach to test a Gentoo package wit
 dev-python/pivy 0.6.5: Coin3D bindings for Python
 dev-python/pyside2-tools 5.15.1-r1: PySide development tools (pyside2-lupdate with support for Python)
 dev-python/recommonmark 0.7.1: Python docutils-compatibility bridge to CommonMark
-dev-util/codespell 1.15.0: Check text files for common misspellings
 dev-util/elkhound 2019.02.17 9999: Elkhound is a GLR parser generator
 dev-util/smartgit 20.2.1: Git client with support for GitHub Pull Requests+Comments, SVN and Mercurial
 games-util/simulationcraft 830.01 9999: SimulationCraft is a tool to explore combat mechanics in World of Warcraft.
