@@ -1,29 +1,38 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit cmake-utils flag-o-matic
+inherit cmake flag-o-matic
 
 DESCRIPTION="Stream based read/write library for COLLADA files"
 HOMEPAGE="http://www.opencollada.org/"
-SRC_URI="https://github.com/KhronosGroup/OpenCOLLADA/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+
+if [[ ${PV} = *9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/KhronosGroup/OpenCOLLADA.git"
+else
+	SRC_URI="https://github.com/KhronosGroup/OpenCOLLADA/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86"
+	S="${WORKDIR}/OpenCOLLADA-${PV}"
+fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="static-libs"
 
-RDEPEND="dev-libs/libpcre
+RDEPEND="
+	dev-libs/libpcre
 	dev-libs/libxml2
-	dev-libs/zziplib
+	dev-libs/zziplib:=
 	media-libs/lib3ds
 	sys-libs/zlib
 "
 DEPEND="${RDEPEND}"
-BDEPEND="virtual/pkgconfig"
-
-S="${WORKDIR}/OpenCOLLADA-${PV}"
+BDEPEND="
+	app-admin/chrpath
+	virtual/pkgconfig
+"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.6.62-cmake-fixes.patch"
@@ -33,13 +42,15 @@ PATCHES=(
 src_prepare() {
 	edos2unix CMakeLists.txt
 
-	cmake-utils_src_prepare
+	cmake_src_prepare
 
 	# Remove bundled depends that have portage equivalents
-	rm -rv Externals/{expat,lib3ds,LibXML,pcre,zziplib} || die
+	einfo "Dropping bundles libraries"
+	rm -r Externals/{expat,lib3ds,LibXML,pcre,zziplib} || die
 
 	# Remove unused build systems
-	rm -v Makefile scripts/{unixbuild.sh,vcproj2cmake.rb} || die
+	einfo "Removing unused scripts"
+	rm Makefile scripts/{unixbuild.sh,vcproj2cmake.rb} || die
 	find "${S}" -name SConscript -delete || die
 }
 
@@ -53,14 +64,19 @@ src_configure() {
 		-DUSE_LIBXML=ON
 	)
 
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install() {
-	cmake-utils_src_install
+	cmake_src_install
 
-	echo "LDPATH=/usr/$(get_libdir)/opencollada" > "${T}"/99${PN} || die "echo failed"
-	doenvd "${T}"/99${PN}
+	newenvd - 99opencollada <<- _EOF_
+		LDPATH=/usr/$(get_libdir)/opencollada
+	_EOF_
+
+	# Remove insecure DAEValidator RUNPATH and install DAEValidator library
+	dolib.so "${BUILD_DIR}/lib/libDAEValidatorLibrary.so"
+	chrpath -d "${BUILD_DIR}/bin/DAEValidator" || die
 
 	dobin "${BUILD_DIR}/bin/DAEValidator"
 	dobin "${BUILD_DIR}/bin/OpenCOLLADAValidator"

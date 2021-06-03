@@ -9,6 +9,7 @@ dev-python/ebuildtester 9999: A dockerized approach to test a Gentoo package wit
 dev-python/pivy 0.6.5: Coin3D bindings for Python
 dev-python/pyside2-tools 5.15.1-r1: PySide development tools (pyside2-lupdate with support for Python)
 dev-python/recommonmark 0.7.1: Python docutils-compatibility bridge to CommonMark
+dev-util/codespell 9999: Check text files for common misspellings
 dev-util/elkhound 2019.02.17 9999: Elkhound is a GLR parser generator
 dev-util/smartgit 20.2.1: Git client with support for GitHub Pull Requests+Comments, SVN and Mercurial
 games-util/simulationcraft 830.01 9999: SimulationCraft is a tool to explore combat mechanics in World of Warcraft.
@@ -26,7 +27,7 @@ media-libs/embree 3.12.2 9999: Collection of high-performance ray tracing kernel
 media-libs/lib3mf 1.8.1: Implementation of the 3D Manufacturing Format file standard
 media-libs/oidn 1.2.4: Denoising filters for rendered images
 media-libs/opencamlib 9999: C++ and Python library for 3D toolpaths
-media-libs/opencollada 1.6.68: Stream based read/write library for COLLADA files
+media-libs/opencollada 9999: Stream based read/write library for COLLADA files
 media-libs/openexr 9999: ILM's OpenEXR high dynamic-range image file format libraries
 media-libs/quarter 1.1.0: Coin GUI binding for Qt
 media-libs/simage 9999: Image and video texturing library
@@ -38,6 +39,5 @@ sci-electronics/uconfig 9999: Datasheet pinout extractor from PDF and library St
 sci-libs/calculix-ccx 2.10: A Free Software Three-Dimensional Structural Finite Element Program
 sci-libs/calculix-cgx 2.10: A Free Software Three-Dimensional Structural Finite Element Program
 sci-libs/magma 2.4.0: Matrix Algebra on GPU and Multicore Architectures
-sci-libs/oce 0.18.3-r3: Development platform for CAD/CAE, 3D surface/solid modeling and data exchange
 sci-libs/spooles 2.2: SParse Object Oriented Linear Equations Solver
 sci-libs/vtk 8.2.0-r3 9.0.1-r1: The Visualization Toolkit

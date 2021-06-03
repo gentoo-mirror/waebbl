@@ -59,10 +59,6 @@ sci-libs/magma:maxwell - Compile for GPU NVIDIA Maxwell family (sm_5x)
 sci-libs/magma:pascal - Compile for GPU NVIDIA Pascal family (sm_6x)
 sci-libs/magma:sparse - Additionally build the sparse matrix library
 sci-libs/magma:volta - Compile for GPU NVIDIA Volta family (sm_7x)
-sci-libs/oce:freeimage - Enable support for image i/o via media-libs/freeimage
-sci-libs/oce:gl2ps - Use gl2ps PostScript printing library
-sci-libs/oce:tbb - Enable parallel meshing
-sci-libs/oce:vtk - Enable Virtualisation Toolkit
 sci-libs/vtk:R - Enable support for dev-lang/R
 sci-libs/vtk:all-modules - Build all modules
 sci-libs/vtk:boost - Add support for boost
