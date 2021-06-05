@@ -17,7 +17,7 @@ games-util/weidu 246.00 9999: Develop, distribute and install mods for Infinity 
 media-gfx/alembic 9999: Open framework for storing and sharing scene data
 media-gfx/aoi 2.7.2: A free, open-source 3D modelling and rendering studio
 media-gfx/awesomebump 5.0: Tool to generate different types of textures from a single image.
-media-gfx/freecad 0.18.6 9999: QT based Computer Aided Design application
+media-gfx/freecad 9999: QT based Computer Aided Design application
 media-gfx/opencsg 1.4.2-r1: The Constructive Solid Geometry rendering library
 media-gfx/osg2vsg 9999: Convert OpenSceneGraph images into VulkanSceneGraph
 media-gfx/vsgExamples 9999: vsgviewer and vsgdraw example programs for VulkanSceneGraph
