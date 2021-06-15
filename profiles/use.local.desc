@@ -54,21 +54,3 @@ sci-libs/magma:maxwell - Compile for GPU NVIDIA Maxwell family (sm_5x)
 sci-libs/magma:pascal - Compile for GPU NVIDIA Pascal family (sm_6x)
 sci-libs/magma:sparse - Additionally build the sparse matrix library
 sci-libs/magma:volta - Compile for GPU NVIDIA Volta family (sm_7x)
-sci-libs/vtk:R - Enable support for dev-lang/R
-sci-libs/vtk:all-modules - Build all modules
-sci-libs/vtk:boost - Add support for boost
-sci-libs/vtk:cuda - Add support for CUDA
-sci-libs/vtk:eigen - Use eigen
-sci-libs/vtk:gdal - Support for gdal formated data
-sci-libs/vtk:imaging - Building Imaging modules
-sci-libs/vtk:java - Generate and install Java bindings
-sci-libs/vtk:json - Support for json formated data
-sci-libs/vtk:kits - Enable kits compilation
-sci-libs/vtk:offscreen - Offscreen rendering through OSMesa
-sci-libs/vtk:pegtl - Build using dev-libs/pegtl
-sci-libs/vtk:python - Generate and install Python bindings
-sci-libs/vtk:rendering - Building Redering modules
-sci-libs/vtk:tbb - Use dev-cpp/tbb to handle smp support
-sci-libs/vtk:views - Building Views modules
-sci-libs/vtk:web - Install web component
-sci-libs/vtk:xdmf2 - Support for xdmf2 formated data
