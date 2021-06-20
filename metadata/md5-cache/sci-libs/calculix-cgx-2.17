@@ -10,5 +10,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/mesa >=media-libs/freeglut-1.0 virtual/opengl x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXext x11-libs/libXi x11-libs/libXmu x11-libs/libXt
 SLOT=0
 SRC_URI=http://www.dhondt.de/cgx_2.17.all.tar.bz2 doc? ( http://www.dhondt.de/cgx_2.17.pdf )
-_eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	ebdbaed22e873a5abe6205f41349b479
+_eclasses_=toolchain-funcs	2545dc6f0aaecb2dea61424911e82674	multilib	ba7da83f763a749a2870c28785c6dc0b
 _md5_=acacde8a65f69f0b3b9da332591e876b
