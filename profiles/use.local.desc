@@ -2,11 +2,8 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
-app-doc/freecad-doc:oce - Use OpenCASCade Community Edition through sci-libs/oce instead of the Official Version sci-libs/opencascade
 dev-libs/imath:large-stack - Enables code to take advantage of large stack support
 dev-libs/qtnproperty:demo - Build and install the demo program.
-dev-python/pivy:quarter - Use media-libs/quarter for GUI bindings
-dev-python/pivy:soqt - Use media-libs/SoQt for GUI bindings
 games-util/simulationcraft:gui - Builds the Qt5 GUI
 media-gfx/alembic:examples - Install alembic examples
 media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
@@ -31,10 +28,6 @@ media-gfx/freecad:show - Build the show module, a helper module for visibility a
 media-gfx/freecad:surface - Build the surface module and workbench
 media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more advanced and feature-rich successor of the drawing workbench
 media-gfx/freecad:tux - Build the Tux module
-media-libs/SoQt:coin-iv-extensions - Enables extra open inventor extensions
-media-libs/SoQt:man - Build and install man pages
-media-libs/SoQt:qthelp - Enable qthelp documentation
-media-libs/SoQt:spacenav - Add support for SpaceNavigator and friends through dev-libs/libspnav.
 media-libs/draco:compat - Build in compatibility mode.
 media-libs/draco:gltf - Compile with support for glTF (GL Transmission Format) from The Khronos Group Inc.
 media-libs/embree:clang - Use sys-devel/clang to compile Embree
@@ -45,9 +38,6 @@ media-libs/embree:tutorial - Compile and install the Embree tutorials.
 media-libs/oidn:openimageio - Build apps with support for media-libs/openimageio
 media-libs/openexr:large-stack - Enable code to take advantage of large stack support.
 media-libs/openexr:utils - Build several utility binaries for verifying and manipulating EXR files.
-media-libs/quarter:designer - Build plugin for Qt Designer
-media-libs/quarter:qthelp - Build the Qt Help documentation
-media-libs/quarter:spacenav - Build support for app-misc/spacenavd
 sci-libs/calculix-ccx:arpack - Add sparse eigen value support via sci-libs/arpack
 sci-libs/magma:kepler - Compile for GPU NVIDIA Kepler family (sm_3x)
 sci-libs/magma:maxwell - Compile for GPU NVIDIA Maxwell family (sm_5x)

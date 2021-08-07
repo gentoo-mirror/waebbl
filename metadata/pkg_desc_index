@@ -1,14 +1,10 @@
-app-doc/freecad-doc 0.19_pre20201231 9999: QT based computer aided design application manuals
-app-editors/visual-studio-code 1.57.1: Multiplatform Visual Studio Code from Microsoft
+app-doc/freecad-doc 9999: QT based computer aided design application manuals
 app-emulation/lxc-gentoo 9999: LXC container creation script for gentoo containers
 dev-cpp/zipios 2.2.6: C++ library for reading and writing zip files
 dev-go/modmerge 1.1-r1: Tool which merges mod zip files back into Infinity Engine games.
 dev-lang/ispc 9999: Intel SPMD Program Compiler
 dev-libs/imath 9999: Imath basic math package
 dev-libs/qtnproperty 1.0.1 9999: Tool to extend properties in the Qt5 framework.
-dev-python/pivy 0.6.5: Coin3D bindings for Python
-dev-python/pyside2-tools 5.15.1-r1: PySide development tools (pyside2-lupdate with support for Python)
-dev-python/recommonmark 0.7.1: Python docutils-compatibility bridge to CommonMark
 dev-util/codespell 9999: Check text files for common misspellings
 dev-util/ebuildtester 9999: A dockerized approach to test a Gentoo package within a clean stage3 container
 dev-util/elkhound 2019.02.17 9999: Elkhound is a GLR parser generator
@@ -19,18 +15,14 @@ media-gfx/alembic 9999: Open framework for storing and sharing scene data
 media-gfx/aoi 3.2.0: A free, open-source 3D modelling and rendering studio
 media-gfx/awesomebump 5.0: Tool to generate different types of textures from a single image.
 media-gfx/freecad 9999: QT based Computer Aided Design application
-media-gfx/opencsg 1.4.2-r1: The Constructive Solid Geometry rendering library
 media-gfx/osg2vsg 9999: Convert OpenSceneGraph images into VulkanSceneGraph
 media-gfx/vsgExamples 9999: vsgviewer and vsgdraw example programs for VulkanSceneGraph
-media-libs/SoQt 1.6.0: The glue between Coin3D and Qt
 media-libs/draco 1.3.5-r2: Library for compressing and decompressing 3D geometric objects
-media-libs/embree 3.12.2 9999: Collection of high-performance ray tracing kernels
-media-libs/lib3mf 1.8.1: Implementation of the 3D Manufacturing Format file standard
+media-libs/embree 9999: Collection of high-performance ray tracing kernels
 media-libs/oidn 1.2.4: Denoising filters for rendered images
 media-libs/opencamlib 9999: C++ and Python library for 3D toolpaths
 media-libs/opencollada 9999: Stream based read/write library for COLLADA files
 media-libs/openexr 9999: ILM's OpenEXR high dynamic-range image file format libraries
-media-libs/quarter 1.1.0: Coin GUI binding for Qt
 media-libs/simage 9999: Image and video texturing library
 media-libs/vsg 9999: Vulkan and C++-17 based Scene Graph Project
 media-libs/vsgXchange 9999: VulkanSceneGraph integration library
