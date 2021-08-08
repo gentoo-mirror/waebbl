@@ -29,7 +29,7 @@ media-libs/vsgXchange 9999: VulkanSceneGraph integration library
 media-plugins/blendluxcore 2.4: A PBS rendering plugin for blender
 sci-astronomy/xephem 3.7.7-r1: Interactive tool for astronomical ephemeris and sky simulation
 sci-electronics/uconfig 9999: Datasheet pinout extractor from PDF and library Stylizer for Kicad.
-sci-libs/calculix-ccx 2.17: A Free Software Three-Dimensional Structural Finite Element Program
+sci-libs/calculix-ccx 2.17-r1: A Free Software Three-Dimensional Structural Finite Element Program
 sci-libs/calculix-cgx 2.17: A Free Software Three-Dimensional Structural Finite Element Program
 sci-libs/magma 2.4.0: Matrix Algebra on GPU and Multicore Architectures
 sci-libs/spooles 2.2: SParse Object Oriented Linear Equations Solver
