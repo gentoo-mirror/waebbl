@@ -28,6 +28,7 @@ media-gfx/freecad:show - Build the show module, a helper module for visibility a
 media-gfx/freecad:surface - Build the surface module and workbench
 media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more advanced and feature-rich successor of the drawing workbench
 media-gfx/freecad:tux - Build the Tux module
+media-gfx/vsgExamples:source - Install source files of example programs as well
 media-libs/draco:compat - Build in compatibility mode.
 media-libs/draco:gltf - Compile with support for glTF (GL Transmission Format) from The Khronos Group Inc.
 media-libs/embree:clang - Use sys-devel/clang to compile Embree
@@ -38,6 +39,14 @@ media-libs/embree:tutorial - Compile and install the Embree tutorials.
 media-libs/oidn:openimageio - Build apps with support for media-libs/openimageio
 media-libs/openexr:large-stack - Enable code to take advantage of large stack support.
 media-libs/openexr:utils - Build several utility binaries for verifying and manipulating EXR files.
+media-libs/vsgFramework:assimp - Use media-libs/assimp with vsgXchange
+media-libs/vsgFramework:freetype - Use media-libs/freetype with vsgXchange
+media-libs/vsgFramework:gdal - Use sci-libs/gdal with vsgXchange
+media-libs/vsgFramework:openscenegraph - Use dev-games/openscenegraph with vsgXchange
+media-libs/vsgXchange:assimp - Support various 3D file formats using media-libs/assimp
+media-libs/vsgXchange:freetype - Enable font conversion through media-libs/freetype
+media-libs/vsgXchange:gdal - Support GIS related formats using media-libs/vsgGIS
+media-libs/vsgXchange:openscenegraph - Support data exchange with dev-games/openscenegraph
 sci-libs/magma:kepler - Compile for GPU NVIDIA Kepler family (sm_3x)
 sci-libs/magma:maxwell - Compile for GPU NVIDIA Maxwell family (sm_5x)
 sci-libs/magma:pascal - Compile for GPU NVIDIA Pascal family (sm_6x)

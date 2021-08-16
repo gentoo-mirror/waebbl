@@ -1,0 +1,15 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=unpack
+DEPEND=dev-util/glslang media-gfx/vsgExamples[source?] media-libs/vsg media-libs/vsgGIS media-libs/vsgImGui media-libs/vsgXchange[assimp?,curl?,freetype?,gdal?,openscenegraph?] media-libs/vulkan-loader[X] x11-libs/libxcb:=
+DESCRIPTION=Meta package to pull in VulkanSceneGraph libs
+EAPI=7
+HOMEPAGE=https://github.com/vsg-dev/vsgFramework
+INHERIT=git-r3
+IUSE=assimp curl freetype gdal openscenegraph source
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=dev-util/glslang media-gfx/vsgExamples[source?] media-libs/vsg media-libs/vsgGIS media-libs/vsgImGui media-libs/vsgXchange[assimp?,curl?,freetype?,gdal?,openscenegraph?] media-libs/vulkan-loader[X] x11-libs/libxcb:=
+RESTRICT=test
+SLOT=0
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=91304fcee162c8db697cc86e46f962c1
