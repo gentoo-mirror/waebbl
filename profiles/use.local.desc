@@ -39,6 +39,11 @@ media-libs/embree:tutorial - Compile and install the Embree tutorials.
 media-libs/oidn:openimageio - Build apps with support for media-libs/openimageio
 media-libs/openexr:large-stack - Enable code to take advantage of large stack support.
 media-libs/openexr:utils - Build several utility binaries for verifying and manipulating EXR files.
+media-libs/opensubdiv:cuda - Enable NVIDIA CUDA Toolkit support through dev-util/nvidia-cuda-toolkit
+media-libs/opensubdiv:opencl - Enable OpenCL support through virtual/opencl
+media-libs/opensubdiv:ptex - Adds support for faster per-face texture mapping through media-libs/ptex
+media-libs/opensubdiv:tbb - Enable multithreading with the Intel Threads Building Blocks through dev-cpp/tbb
+media-libs/opensubdiv:tutorials - Install the tutorials
 media-libs/vsgFramework:assimp - Use media-libs/assimp with vsgXchange
 media-libs/vsgFramework:freetype - Use media-libs/freetype with vsgXchange
 media-libs/vsgFramework:gdal - Use sci-libs/gdal with vsgXchange
