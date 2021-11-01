@@ -22,7 +22,7 @@ media-libs/oidn 1.2.4: Denoising filters for rendered images
 media-libs/opencamlib 9999: C++ and Python library for 3D toolpaths
 media-libs/opencollada 9999: Stream based read/write library for COLLADA files
 media-libs/openexr 9999: ILM's OpenEXR high dynamic-range image file format libraries
-media-libs/opensubdiv 3.4.4: An Open-Source subdivision surface library
+media-libs/opensubdiv 3.4.4-r1: An Open-Source subdivision surface library
 media-libs/simage 9999: Image and video texturing library
 media-libs/vsg 0.1.4 9999: Vulkan and C++-17 based Scene Graph Project
 media-libs/vsgFramework 9999: Meta package to pull in VulkanSceneGraph libs
