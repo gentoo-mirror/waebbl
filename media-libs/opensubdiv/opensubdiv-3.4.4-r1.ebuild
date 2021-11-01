@@ -30,7 +30,7 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-	tbb? ( dev-cpp/tbb )
+	tbb? ( <dev-cpp/tbb-2021.4.0:= )
 "
 BDEPEND="
 	cuda? ( <sys-devel/gcc-12[cxx] )
