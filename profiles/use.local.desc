@@ -57,10 +57,3 @@ sci-libs/magma:maxwell - Compile for GPU NVIDIA Maxwell family (sm_5x)
 sci-libs/magma:pascal - Compile for GPU NVIDIA Pascal family (sm_6x)
 sci-libs/magma:sparse - Additionally build the sparse matrix library
 sci-libs/magma:volta - Compile for GPU NVIDIA Volta family (sm_7x)
-sci-libs/opencascade:eigen - Enable support for dev-cpp/eigen header-only eigenvalue library
-sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
-sci-libs/opencascade:gles2 - Use OpenGL ES 2.0
-sci-libs/opencascade:json - Enable JSON support through dev-libs/rapidjson
-sci-libs/opencascade:optimize - Don't clear allocated memory. Use optimized memory manager unless tbb USE flag is set.
-sci-libs/opencascade:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
-sci-libs/opencascade:vtk - Enable Visualization Toolkit support via sci-libs/vtk
