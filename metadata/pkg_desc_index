@@ -14,6 +14,7 @@ media-gfx/aoi 3.2.0: A free, open-source 3D modelling and rendering studio
 media-gfx/awesomebump 5.0: Tool to generate different types of textures from a single image.
 media-gfx/freecad 9999: QT based Computer Aided Design application
 media-gfx/vsgExamples 9999: Vsgviewer and vsgdraw example programs for VulkanSceneGraph
+media-libs/coin 4.0.0: A high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1
 media-libs/draco 1.3.5-r2: Library for compressing and decompressing 3D geometric objects
 media-libs/embree 9999: Collection of high-performance ray tracing kernels
 media-libs/oidn 1.2.4: Denoising filters for rendered images

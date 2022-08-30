@@ -27,6 +27,8 @@ media-gfx/freecad:surface - Build the surface module and workbench
 media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more advanced and feature-rich successor of the drawing workbench
 media-gfx/freecad:tux - Build the Tux module
 media-gfx/vsgExamples:source - Install source files of example programs as well
+media-libs/coin:exceptions - Compile with C++ exceptions
+media-libs/coin:qthelp - Build API documentation in QtHelp format
 media-libs/draco:compat - Build in compatibility mode.
 media-libs/draco:gltf - Compile with support for glTF (GL Transmission Format) from The Khronos Group Inc.
 media-libs/embree:clang - Use sys-devel/clang to compile Embree
