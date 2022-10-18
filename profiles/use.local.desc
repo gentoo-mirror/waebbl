@@ -45,9 +45,6 @@ media-libs/opensubdiv:ptex - Adds support for faster per-face texture mapping th
 media-libs/opensubdiv:tbb - Enable multithreading with the Intel Threads Building Blocks through dev-cpp/tbb
 media-libs/opensubdiv:tutorials - Install the tutorials
 media-libs/vsgFramework:assimp - Use media-libs/assimp with vsgXchange
-media-libs/vsgFramework:freetype - Use media-libs/freetype with vsgXchange
-media-libs/vsgFramework:gdal - Use sci-libs/gdal with vsgXchange
-media-libs/vsgFramework:openscenegraph - Use dev-games/openscenegraph with vsgXchange
 media-libs/vsgXchange:assimp - Support various 3D file formats using media-libs/assimp
 media-libs/vsgXchange:freetype - Enable font conversion through media-libs/freetype
 media-libs/vsgXchange:gdal - Support GIS related formats using media-libs/vsgGIS

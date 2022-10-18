@@ -13,7 +13,7 @@ games-util/weidu 246.00 249.00 9999: Develop, distribute and install mods for In
 media-gfx/aoi 3.2.0: A free, open-source 3D modelling and rendering studio
 media-gfx/awesomebump 5.0: Tool to generate different types of textures from a single image.
 media-gfx/freecad 9999: QT based Computer Aided Design application
-media-gfx/vsgExamples 9999: Vsgviewer and vsgdraw example programs for VulkanSceneGraph
+media-gfx/vsgExamples 9999: Example programs for VulkanSceneGraph
 media-libs/coin 4.0.0: A high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1
 media-libs/draco 1.3.5-r2: Library for compressing and decompressing 3D geometric objects
 media-libs/embree 9999: Collection of high-performance ray tracing kernels
@@ -22,11 +22,12 @@ media-libs/opencamlib 9999: C++ and Python library for 3D toolpaths
 media-libs/opencollada 9999: Stream based read/write library for COLLADA files
 media-libs/openexr 9999: ILM's OpenEXR high dynamic-range image file format libraries
 media-libs/opensubdiv 3.4.4-r1: An Open-Source subdivision surface library
+media-libs/osg2vsg 9999: Library and utilities between OSG and VSG
 media-libs/simage 9999: Image and video texturing library
-media-libs/vsg 0.1.4 9999: Vulkan and C++-17 based Scene Graph Project
-media-libs/vsgFramework 9999: Meta package to pull in VulkanSceneGraph libs
-media-libs/vsgGIS 9999: Library providing GIS related functionality for VulkanSceneGraph
+media-libs/vsg 0.1.10 9999: Vulkan and C++-17 based Scene Graph Project
+media-libs/vsgFramework 9999: Meta package to pull in VulkanSceneGraph
 media-libs/vsgImGui 9999: Integration of VulkanSceneGraph with ImGui
+media-libs/vsgQt 9999: Qt integration with VulkanSceneGraph
 media-libs/vsgXchange 9999: VulkanSceneGraph integration library
 media-plugins/blendluxcore 2.5: A PBS rendering plugin for blender
 sci-astronomy/xephem 3.7.7-r1: Interactive tool for astronomical ephemeris and sky simulation
