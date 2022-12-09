@@ -1,5 +1,5 @@
 app-containers/lxc-gentoo 9999: LXC container creation script for gentoo containers
-dev-cpp/zipios 2.2.6: C++ library for reading and writing zip files
+dev-cpp/zipios 2.2.6 9999: C++ library for reading and writing zip files
 dev-go/modmerge 1.1-r1: Tool which merges mod zip files back into Infinity Engine games.
 dev-lang/ispc 9999: Intel SPMD Program Compiler
 dev-libs/imath 9999: Imath basic math package
