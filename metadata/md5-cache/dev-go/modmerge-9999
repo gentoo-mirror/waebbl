@@ -1,0 +1,12 @@
+BDEPEND=dev-lang/go >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=Tool which merges mod zip files back into Infinity Engine games.
+EAPI=8
+HOMEPAGE=https://github.com/ScottBrooks/modmerge
+INHERIT=git-r3
+LICENSE=IdeaSpark
+PROPERTIES=live
+RESTRICT=strip test
+SLOT=0
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f
+_md5_=11aa7cdf23884fe9178d4c4aa65e3774
