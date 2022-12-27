@@ -13,5 +13,5 @@ RDEPEND=>=virtual/jre-1.8:* >=dev-java/java-config-2.2.0-r3
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/ArtOfIllusion/ArtOfIllusion/archive/refs/tags/3.2.0.tar.gz -> aoi-3.2.0.tar.gz
-_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	java-utils-2	c79d65661a9f4f72b60376c9e4b3dfa1	java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	java-ant-2	5cf479aa9e0ac9cc55899f2762c2aaa0	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	python-utils-r1	6a75203e8a499f0fb42971452ce15388	python-any-r1	1a218637f27d4c027b92e511707264fd	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	java-utils-2	c79d65661a9f4f72b60376c9e4b3dfa1	java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	java-ant-2	5cf479aa9e0ac9cc55899f2762c2aaa0	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	python-utils-r1	1d1b325c00c1d24c564a1b49327ec3c5	python-any-r1	d2955aaac8daaaa69fcc6dc93ed19f29	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
 _md5_=a1160d54ef1576f46e54c0e62359715e
