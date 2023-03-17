@@ -8,5 +8,5 @@ LICENSE=IdeaSpark
 PROPERTIES=live
 RESTRICT=strip test
 SLOT=0
-_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f
+_eclasses_=git-r3	c57c50c922e121043788de0b40ada60a
 _md5_=11aa7cdf23884fe9178d4c4aa65e3774
