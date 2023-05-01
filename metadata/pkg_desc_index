@@ -23,7 +23,6 @@ media-libs/vsgFramework 9999: Meta package to pull in VulkanSceneGraph
 media-libs/vsgImGui 9999: Integration of VulkanSceneGraph with ImGui
 media-libs/vsgQt 9999: Qt integration with VulkanSceneGraph
 media-libs/vsgXchange 9999: VulkanSceneGraph integration library
-media-plugins/blendluxcore 2.5: A PBS rendering plugin for blender
 sci-electronics/uconfig 9999: Datasheet pinout extractor from PDF and library Stylizer for Kicad.
 sci-libs/calculix-ccx 2.17-r1 2.20: A Free Software Three-Dimensional Structural Finite Element Program
 sci-libs/calculix-cgx 2.17 2.20: A Free Software Three-Dimensional Structural Finite Element Program
