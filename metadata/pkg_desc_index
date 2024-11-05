@@ -8,7 +8,6 @@ dev-util/elkhound 2019.02.17 9999: Elkhound is a GLR parser generator
 dev-util/smartgit 21.2.2: Git client with support for GitHub Pull Requests+Comments, SVN and Mercurial
 games-util/simulationcraft 9999: SimulationCraft is a tool to explore combat mechanics in World of Warcraft.
 games-util/weidu 246.00 249.00 9999: Develop, distribute and install mods for Infinity Engine games.
-media-gfx/aoi 3.2.0: A free, open-source 3D modelling and rendering studio
 media-gfx/awesomebump 5.0: Tool to generate different types of textures from a single image.
 media-gfx/freecad 9999: QT based Computer Aided Design application
 media-gfx/netgen 6.2.2204: Automatic 3d tetrahedral mesh generator
