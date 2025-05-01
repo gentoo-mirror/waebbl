@@ -1,7 +1,6 @@
 app-containers/lxc-gentoo 9999: LXC container creation script for gentoo containers
 dev-cpp/zipios 2.2.6 9999: C++ library for reading and writing zip files
 dev-go/modmerge 9999: Tool which merges mod zip files back into Infinity Engine games.
-dev-libs/imath 9999: Imath basic math package
 dev-libs/qtnproperty 1.0.1 9999: Tool to extend properties in the Qt5 framework.
 dev-python/sphinx_press_theme 0.8.0: Theme for sphinx, based on VuePress
 dev-util/elkhound 2019.02.17 9999: Elkhound is a GLR parser generator
@@ -9,8 +8,6 @@ dev-util/smartgit 21.2.2: Git client with support for GitHub Pull Requests+Comme
 games-util/simulationcraft 9999: SimulationCraft is a tool to explore combat mechanics in World of Warcraft.
 games-util/weidu 246.00 249.00 9999: Develop, distribute and install mods for Infinity Engine games.
 media-gfx/awesomebump 5.0: Tool to generate different types of textures from a single image.
-media-gfx/freecad 9999: QT based Computer Aided Design application
-media-gfx/netgen 6.2.2204: Automatic 3d tetrahedral mesh generator
 media-gfx/vsgExamples 9999: Example programs for VulkanSceneGraph
 media-libs/draco 1.3.5-r2 1.5.6: Library for compressing and decompressing 3D geometric objects
 media-libs/opencollada 9999: Stream based read/write library for COLLADA files
